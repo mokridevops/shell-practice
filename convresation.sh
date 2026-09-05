@@ -2,8 +2,8 @@
 
 #conversational content
 
-person1=Mohan
-person2=company
+person1=$1
+person2=$2
 
 echo "$person1: hi I am devops engineer"
 echo "$person2: welcome devops engineer"
