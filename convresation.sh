@@ -2,8 +2,11 @@
 
 #conversational content
 
-echo "hi I am devops engineer"
-echo "company: welcome devops engineer"
-echo "I can implement linux, shellscripting, ansible, terraform,
+person1=Mohan
+person2=company
+
+echo "$person1: hi I am devops engineer"
+echo "$person2: welcome devops engineer"
+echo "$person1: I can implement linux, shellscripting, ansible, terraform,
       docker, kubernetes, jenkins"
-echo "company: we would like to interview you"
+echo "$person2: we would like to interview you"
