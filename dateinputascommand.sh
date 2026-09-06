@@ -1,12 +1,12 @@
 #!/bin/bash
 
-Timestamp=$(date +%s)
+#Timestamp=$(date +%s)
 
-Starttime=$Timestamp
+Starttime=$(date +%s)
 
 sleep 10;
 
-Endtime=$Timestamp
+Endtime=$(date +%s)
 
 echo "total time is: $(($EndTime-$StartTime))
 
