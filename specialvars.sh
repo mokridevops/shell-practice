@@ -12,3 +12,4 @@ echo "process instance ID of current script $$"
 sleep 11 &
 echo "process id of the bacground command running just now $!"
 wait $!
+echo "line number $LINENO"
