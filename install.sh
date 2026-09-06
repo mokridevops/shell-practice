@@ -12,7 +12,7 @@ echo "installing mysql"
 
 dnf install mysql -y
 
-if [ $? -ne 0 ]
+if [ $? -ne 0 ]; then
 echo "installing mysql is a .... failure"
 else
 echo "installing mysql is a .... success"
