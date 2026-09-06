@@ -14,3 +14,4 @@ echo "process id of the bacground command running just now $!"
 wait $!
 echo "line number $LINENO"
 echo "script executed in $SECONDS seconds"
+echo "random number $RANDOM"
