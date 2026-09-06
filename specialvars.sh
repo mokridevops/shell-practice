@@ -9,8 +9,8 @@ echo "who is running this script $USER"
 echo "which directory this script is running $PWD"
 echo "home directory of the user $HOME"
 echo "process instance ID of current script $$"
-sleep 11 &
+sleep 5 &
 echo "process id of the bacground command running just now $!"
-#wait $!
+wait $!
 echo "line number $LINENO"
 echo "script executed in $SECONDS seconds"
