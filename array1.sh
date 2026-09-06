@@ -1,4 +1,6 @@
 #!/bin/bash
 
 MOVIES={"RRR","VARANASI","PUSHPA"}
-echo "movies are ${MOVIES[@]}"
+echo "all movies are ${MOVIES[@]}"
+
+echo "first movie: ${MOVIES[0]}"
