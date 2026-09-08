@@ -8,7 +8,7 @@ echo "run with root access"
 exit 1
 fi
 
-VALDIATE()
+VALIDATE()
 {
     if [ $2 -ne 0 ]; then
     echo "installing $1 is a .... failure"
