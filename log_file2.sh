@@ -13,6 +13,7 @@ fi
 VALIDATE()
 {
     if [ $2 -ne 0 ]; then
+    echo "$2"
     echo "installing $1 is a .... failure"
     exit 1
     else
