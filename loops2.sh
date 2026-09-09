@@ -25,7 +25,7 @@ VALIDATE()
 
 for package in $@
 do
-    echo "$TIMESTAMP [INFO] Installing $package" | TEE -A $LOGS_FILE
+    echo "$TIMESTAMP [INFO] Installing $package" | tee -a $LOGS_FILE
 
     dnf list installed $package &>> $LOGS_FILE
     if [ $? -ne 0 ] ; then
