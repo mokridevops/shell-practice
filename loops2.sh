@@ -8,7 +8,7 @@ LOGS_FILE="$LOGS_DIR/$0.log" # /var/log/shell-script/log_file2.sh.log
 TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
 
 if [ $USERID -ne 0 ]; then
-echo $TIMESTAMP "run with root access" | tee -a $LOGS_FILE
+echo "$TIMESTAMP [INFO] run with root access" | tee -a $LOGS_FILE
 exit 1
 fi
 
@@ -16,23 +16,23 @@ VALIDATE()
 {
     if [ $2 -ne 0 ]; then
     echo "$2"
-    echo $TIMESTAMP "installing $1 is a .... failure" | tee -a $LOGS_FILE
+    echo "$TIMESTAMP [ERROR] installing $1 is a .... failure" | tee -a $LOGS_FILE
     exit 1
     else
-    echo $TIMESTAMP "installing $1 is a .... success" | tee -a $LOGS_FILE
+    echo "$TIMESTAMP [INFO] installing $1 is a .... success" | tee -a $LOGS_FILE
     fi
 }
 
 for package in $@
 do
-    echo $TIMESTAMP "Installing $package"
+    echo "$TIMESTAMP [INFO] Installing $package" | TEE -A $LOGS_FILE
 
     dnf list installed $package &>> $LOGS_FILE
     if [ $? -ne 0 ] ; then
     dnf install $package -y &>> $LOGS_FILE
     VALIDATE "Installing $package" $?
     else
-        echo $TIMESTAMP  "$package already installed....Skiping"
+        echo "$TIMESTAMP [ERROR]  $package already installed....Skipping" | tee -a $LOGS_FILE
     fi
 
 done
