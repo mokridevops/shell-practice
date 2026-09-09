@@ -3,7 +3,7 @@
 USERID=$(id -u)
 # this is to get the id of the root user as an input to our script
 LOGS_DIR=/var/log/shell-script
-LOGS_FILE="$LOGS_DIR/$0.log" # /home/ec2-user/shell-logs/log_file.sh.log
+LOGS_FILE="$LOGS_DIR/$0.log" # /var/log/shell-script/log_file2.sh.log
 
 if [ $USERID -ne 0 ]; then
 echo "run with root access"
