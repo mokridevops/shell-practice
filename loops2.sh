@@ -32,7 +32,7 @@ do
     dnf install $package -y &>> $LOGS_FILE
     VALIDATE "Installing $package" $?
     else
-        echo "$TIMESTAMP [ERROR]  $package already installed....Skipping" | tee -a $LOGS_FILE
+        echo "$TIMESTAMP [INFO]  $package already installed....Skipping" | tee -a $LOGS_FILE
     fi
 
 done
