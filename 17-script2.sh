@@ -1,4 +1,4 @@
 #!/bin/bash
-COUNTRY="USA"
-echo "country is.....$COUNTRY"
+
+echo "I am in country.....$COUNTRY"
 echo "process id is $$"
