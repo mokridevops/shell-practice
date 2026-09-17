@@ -7,7 +7,8 @@ MESSAGE=$4
 TO_ADDRESS=$5
 SUBJECT=$6
 
-FINAL_BODY=$(sed -e "s/TO_TEAM/$TO_TEAM/g" -e "s/ALERTY_TYPE/$ALERTY_TYPE/g" -e "s/SERVER_IP/$SERVER_IP/g" -e "s/MESSAGE/$MESSAGE/g" template.html)
+FINAL_MESSAGE=$(echo $MESSAGE | sed -e 's/[&/]/\\&/g')
+FINAL_BODY=$(sed -e "s/TO_TEAM/$TO_TEAM/g" -e "s/ALERTY_TYPE/$ALERTY_TYPE/g" -e "s/SERVER_IP/$SERVER_IP/g" -e "s/MESSAGE/$FINAL_MESSAGE/g" template.html)
 
 
 {
