@@ -32,4 +32,4 @@ while IFS=read -r FILE
      do
      echo "$FILE"
 
-     done >>> "$FILES"
+     done <<< "$FILES"
