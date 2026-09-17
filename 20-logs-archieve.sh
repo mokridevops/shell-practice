@@ -40,3 +40,17 @@ TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 ARCHIEVE_FILE="$DEST_DIR/logs-archieve-$TIMESTAMP.tar.gz"
 
 tar -czvf $ARCHIEVE_FILE $FILES
+
+if [ $? -eq 0 ]; then
+  echo "archival successful, deleting the files from source directory"
+  while IFS= read -r FILE
+       do
+         echo "File to be deleted: $FILE"
+         rm -f "$FILE"
+         echo "Deleted file: $FILE"
+       done <<< "$FILES"
+
+   else
+          echo "ERROR :: Archival Failed"
+          exit 1
+   fi     
