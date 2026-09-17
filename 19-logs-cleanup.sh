@@ -11,7 +11,7 @@ exit 1
 fi
 
 
-if [ ! -d $SOURCE_DIR]; then
+if [ ! -d $SOURCE_DIR ]; then
      echo "Directory does not exist"
      exit 1
 fi
