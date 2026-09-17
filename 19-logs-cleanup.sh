@@ -28,5 +28,5 @@ echo "scanning $SOURCE_DIR for log files older than 14 days"
      do
         echo "file to be deleted: $FILE"
         rm -f $FILE
-        echo "file delted: $FILE"
+        echo "file deleted: $FILE"
      done <<<"$FILES"
